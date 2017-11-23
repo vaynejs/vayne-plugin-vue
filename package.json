@@ -25,7 +25,6 @@
     "eslint-config-vayne": "^0.0.2"
   },
   "dependencies": {
-    "vue-loader": "^13.5.0",
-    "vue-style-loader": "^3.0.3"
+    "vue-loader": "^13.5.0"
   }
 }
