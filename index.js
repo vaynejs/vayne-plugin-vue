@@ -34,7 +34,8 @@ function vueLoaderConf(config, utils) {
   return {
     loaders: utils.cssLoaders({
       sourceMap: sourceMapEnabled,
-      extract: isProduction
+      extract: isProduction,
+      usePostCSS: true
     }),
     cssSourceMap: sourceMapEnabled,
     transformToRequire: {
