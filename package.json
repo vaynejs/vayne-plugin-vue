@@ -1,0 +1,31 @@
+{
+  "name": "vayne-plugin-vue",
+  "version": "1.0.0",
+  "description": "vayne vue plugins",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/vaynejs/vayne-plugin-vue.git"
+  },
+  "keywords": [
+    "vayne",
+    "vue"
+  ],
+  "author": "xierenyuan@qq.com",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/vaynejs/vayne-plugin-vue/issues"
+  },
+  "homepage": "https://github.com/vaynejs/vayne-plugin-vue#readme",
+  "devDependencies": {
+    "eslint": "^4.11.0",
+    "eslint-config-vayne": "^0.0.2"
+  },
+  "dependencies": {
+    "vue-loader": "^13.5.0",
+    "vue-style-loader": "^3.0.3"
+  }
+}
