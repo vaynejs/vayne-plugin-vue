@@ -1,6 +1,6 @@
 {
   "name": "vayne-plugin-vue",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "vayne vue plugins",
   "main": "index.js",
   "scripts": {
