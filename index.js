@@ -33,12 +33,20 @@ class VaynePluginVue {
     const sourceMapEnabled = isProduction
       ? config.build.productionSourceMap
       : config.dev.cssSourceMap
+    let cssLoader = utils.cssLoaders({
+      sourceMap: sourceMapEnabled,
+      extract: isProduction,
+      usePostCSS: true
+    })
+
+    // TODO 解决 解构... 无法使用的问题 可能是因为vue-loader  和babel-loader  没有在一起 先这样写吧..
+    let loaders = Object.assign(
+      {},
+      cssLoader,
+      {js: 'babel-loader'})
+
     return {
-      loaders: utils.cssLoaders({
-        sourceMap: sourceMapEnabled,
-        extract: isProduction,
-        usePostCSS: true
-      }),
+      loaders: loaders,
       cssSourceMap: sourceMapEnabled,
       transformToRequire: {
         video: 'src',
