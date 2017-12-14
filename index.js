@@ -33,10 +33,13 @@ class VaynePluginVue {
     const sourceMapEnabled = isProduction
       ? config.build.productionSourceMap
       : config.dev.cssSourceMap
+    let vue = config.vue || {}
+    // postcss 插件会重复编译 导致 自己写的rem 插件会失效 所以提供出去 某些情况下禁用掉
+    let usePostCSS = vue.usePostCSS === undefined ? true : vue.usePostCSS
     let cssLoader = utils.cssLoaders({
       sourceMap: sourceMapEnabled,
       extract: isProduction,
-      usePostCSS: true
+      usePostCSS: usePostCSS
     })
 
     // TODO 解决 解构... 无法使用的问题 可能是因为vue-loader  和babel-loader  没有在一起 先这样写吧..
